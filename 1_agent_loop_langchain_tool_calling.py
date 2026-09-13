@@ -77,7 +77,7 @@ def run_agent(query: str):
     print(f"Query: {query}")
 
     sys_msg = SystemMessage(content="""
-        You are a helpful shopping assistant. You have access to a product catalog tool and a discount tool.
+        You are a helpful shopping assistant. You have access to a product catalog tool and a discount tool. Note that all prices are in USD ($).
         
         STRICT RULES - you must follow these EXACTLY:
         1. NEVER assume or guess the price of a product. You MUST call get_product_price() to get the real price.
