@@ -4,12 +4,8 @@ load_dotenv()
 
 from langchain.chat_models import init_chat_model
 from langchain.tools import tool
-from langchain_core.messages import (
-    HumanMessage,
-    SystemMessage,
-    ToolMessage,
-    BaseMessage,
-)
+from langchain_core.messages import (BaseMessage, HumanMessage, SystemMessage,
+                                     ToolMessage)
 from langsmith import traceable
 
 MAX_ITERATIONS = 10
@@ -54,20 +50,33 @@ def get_discount_tier(price: float, tier: str) -> float:
     return round(price * (100.0 - discount_percent) / 100.0, 2)
 
 
+@tool
+def ask_user_question(query: str) -> str:
+    """
+    Asks user a question and returns the answer.
+    Args:
+        query: The question to ask the human user.
+
+    Returns:
+        The user's answer.
+    """
+    print(f"    >> Executing ask_user_question for {query}")
+    return input(f"    [Agent Asks]: {query}\n\t>> ")
+
+
 # --- Agent Loop ---
 
 
 @traceable(name="LangChain Agent Loop")
 def run_agent(query: str):
-    tools = [get_product_price, get_discount_tier]
+    tools = [get_product_price, get_discount_tier, ask_user_question]
     tool_dict = {t.name: t for t in tools}
     llm = init_chat_model(model=f"{PROVIDER}:{MODEL}", temperature=0.1)
     llm_with_tools = llm.bind_tools(tools)
 
     print(f"Query: {query}")
 
-    sys_msg = SystemMessage(
-        content="""
+    sys_msg = SystemMessage(content="""
         You are a helpful shopping assistant. You have access to a product catalog tool and a discount tool.
         
         STRICT RULES - you must follow these EXACTLY:
@@ -75,10 +84,10 @@ def run_agent(query: str):
         2. Only call get_discount_tier() AFTER you have received a price from get_product_price(). Pass the exact price. NEVER use a made-up number.
         3. NEVER calculate discounts yourself using math. ALWAYS use the get_discount_tier() to do this.
         4. If the user does not specify a discount tier, ask them which tier to use. NEVER assume the tier.
-        """
-    )
+        """)
     human_msg = HumanMessage(content=query)
     msgs: list[BaseMessage] = [sys_msg, human_msg]
+    ai_msg: BaseMessage | None = None
 
     for iteration in range(1, MAX_ITERATIONS + 1):
         print(f"\n--- Iteration {iteration} ---")
@@ -86,8 +95,7 @@ def run_agent(query: str):
         tool_calls = ai_msg.tool_calls
 
         if not tool_calls:
-            print(f"Final Answer: {ai_msg.content}")
-            return ai_msg.content
+            break
 
         # limiting to only ONE tool call per iteration for simplicity
         tool_call = tool_calls[0]
@@ -107,11 +115,15 @@ def run_agent(query: str):
         msgs.append(ai_msg)
         msgs.append(ToolMessage(content=str(obs), tool_call_id=tool_id))
 
-    pass
+    if not ai_msg:
+        raise ValueError("Agent unable to answer!")
+
+    print(f"Final Answer: {ai_msg.content}")
+    return ai_msg.content
 
 
 if __name__ == "__main__":
     print("Hello LangChain Agent (.bind_tools)!\n")
-    result = run_agent(
-        "What is the price for a laptop after applying the gold discount?"
-    )
+    question = "What is the price for a laptop after applying the gold discount?"
+    question = "What is the price for a headphones after applying my discount?"
+    result = run_agent(question)
