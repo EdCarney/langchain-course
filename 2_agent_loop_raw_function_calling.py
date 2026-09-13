@@ -47,7 +47,7 @@ def get_discount_tier(price: float, tier: str) -> float:
     """
     print(f"    >> Executing get_discount_tier for {price} and {tier}")
     discount_percentages = {"bronze": 5, "silver": 12, "gold": 23}
-    discount_percent = discount_percentages.get(tier, 0.0)
+    discount_percent = discount_percentages.get(tier.lower(), 0.0)
     return round(price * (100.0 - discount_percent) / 100.0, 2)
 
 
@@ -134,7 +134,7 @@ def ollama_chat_traced(messages) -> ollama.ChatResponse:
 # --- Agent Loop ---
 
 
-@traceable(name="LangChain Agent Loop")
+@traceable(name="Ollama Agent Loop")
 def run_agent(query: str):
     global ai_msg
     tool_dict = {
