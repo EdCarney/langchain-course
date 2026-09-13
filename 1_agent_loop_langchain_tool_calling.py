@@ -128,4 +128,5 @@ if __name__ == "__main__":
     print("Hello LangChain Agent (.bind_tools)!\n")
     question = "What is the price for a laptop after applying the gold discount?"
     question = "What is the price for a headphones after applying my discount?"
+    question = "What is the price for me after applying my discount?"
     result = run_agent(question)
