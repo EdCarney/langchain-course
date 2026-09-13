@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="34c5dc0d-673b-43c8-929c-d02adf128746" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000000884876672" />
+      <entry key="MS500" value="1.0438637077299273" />
+      <entry key="S2" value="1.7943394213402655" />
+      <entry key="S5" value="3.145245758472967" />
+      <entry key="S10" value="4.436276955267865" />
+      <entry key="S30" value="6.172295042451765" />
+      <entry key="S60" value="7.985060577642591" />
+      <entry key="M2" value="13.030448367925473" />
+      <entry key="M5" value="31.84766923960932" />
+      <entry key="M10" value="62.831868149263784" />
+      <entry key="M15" value="98.12611278828886" />
+      <entry key="M30" value="195.75931964950763" />
+      <entry key="H1" value="316.5040035018002" />
+      <entry key="H2" value="448.8882399731684" />
+      <entry key="H4" value="591.5722560290541" />
+      <entry key="D1" value="851.6474416432576" />
+      <entry key="W1" value="924.6009211510479" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="3.583021237907202E-234" />
+      <entry key="S2" value="4.567511886287342E-59" />
+      <entry key="S5" value="6.539032500608248E-24" />
+      <entry key="S10" value="4.126283222342461E-12" />
+      <entry key="S30" value="3.28395124939183E-4" />
+      <entry key="S60" value="0.03132921625258736" />
+      <entry key="M2" value="0.30776144669986755" />
+      <entry key="M5" value="1.3218802532025347" />
+      <entry key="M10" value="2.7384072297034945" />
+      <entry key="M15" value="4.041396415519182" />
+      <entry key="M30" value="6.901884839783057" />
+      <entry key="H1" value="9.962898261125282" />
+      <entry key="H2" value="13.46015021954074" />
+      <entry key="H4" value="17.225755284508143" />
+      <entry key="D1" value="23.229536968123266" />
+      <entry key="W1" value="24.731225173017236" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.6783022307848818" />
+      <entry key="MS500" value="0.9667744964097571" />
+      <entry key="S2" value="1.7456340858792214" />
+      <entry key="S5" value="3.0533768012076727" />
+      <entry key="S10" value="4.3445366968919314" />
+      <entry key="S30" value="6.115116586610806" />
+      <entry key="S60" value="7.9648174194664545" />
+      <entry key="M2" value="13.291191578695525" />
+      <entry key="M5" value="33.13397323007902" />
+      <entry key="M10" value="65.5402383821184" />
+      <entry key="M15" value="102.13948405300792" />
+      <entry key="M30" value="202.63819083885832" />
+      <entry key="H1" value="326.4501664497817" />
+      <entry key="H2" value="462.3364579154887" />
+      <entry key="H4" value="608.7899246476816" />
+      <entry key="D1" value="874.8750414106916" />
+      <entry key="W1" value="949.3318481639286" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3JEp4Cuy36ndyrZmyVHA9uLHs4H" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "project/react-search-agent",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "python.packages.toolwindow.project.migrated.to.right.top.v2": "true",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="langchain-course" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="RUN_TOOL" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-eff1e8def5f5-5bd6d13a2a75-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-262.10315.174" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="34c5dc0d-673b-43c8-929c-d02adf128746" name="Changes" comment="" />
+      <created>1789235888600</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789235888600</updated>
+      <workItem from="1789235889756" duration="10687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="project/hello-world" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/langchain_course$main.coverage" NAME="main Coverage Results" MODIFIED="1789271785390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
