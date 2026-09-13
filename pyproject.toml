@@ -12,8 +12,11 @@ dependencies = [
     "isort>=9.0.1",
     "langchain>=1.4.0",
     "langchain-anthropic>=1.7.2",
+    "langchain-core>=1.6.3",
     "langchain-ollama>=1.1.0",
     "langchain-tavily>=0.2.18",
+    "pydantic>=2.13.5",
     "python-dotenv>=1.2.3",
+    "tavily>=1.1.0",
     "tavily-python>=0.8.2",
 ]
