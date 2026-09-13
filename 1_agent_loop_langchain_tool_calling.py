@@ -9,8 +9,10 @@ from langchain_core.messages import (BaseMessage, HumanMessage, SystemMessage,
 from langsmith import traceable
 
 MAX_ITERATIONS = 10
-PROVIDER = "ollama"
-MODEL = "gemma4:e4b-mlx"
+PROVIDER_OLLAMA = "ollama"
+PROVIDER_ANTHROPIC = "anthropic"
+MODEL_GEMMA = f"{PROVIDER_OLLAMA}:gemma4:e4b-mlx"
+MODEL_CLAUDE = f"{PROVIDER_ANTHROPIC}:claude-sonnet-5"
 
 # --- Tools (LangChain @tool decorator) ---
 
@@ -71,7 +73,7 @@ def ask_user_question(query: str) -> str:
 def run_agent(query: str):
     tools = [get_product_price, get_discount_tier, ask_user_question]
     tool_dict = {t.name: t for t in tools}
-    llm = init_chat_model(model=f"{PROVIDER}:{MODEL}", temperature=0.1)
+    llm = init_chat_model(model=MODEL_GEMMA, temperature=0.1)
     llm_with_tools = llm.bind_tools(tools)
 
     print(f"Query: {query}")

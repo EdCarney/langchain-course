@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34c5dc0d-673b-43c8-929c-d02adf128746" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1_agent_loop_langchain_tool_calling.py" beforeDir="false" afterPath="$PROJECT_DIR$/1_agent_loop_langchain_tool_calling.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,61 +18,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000112207326" />
-      <entry key="MS500" value="1.0357164060441513" />
-      <entry key="S2" value="2.389708017401005" />
-      <entry key="S5" value="4.547429032892444" />
-      <entry key="S10" value="6.078002942319122" />
-      <entry key="S30" value="15.047078867697742" />
-      <entry key="S60" value="31.29738341615298" />
-      <entry key="M2" value="53.11814534764624" />
-      <entry key="M5" value="95.85599259400438" />
-      <entry key="M10" value="166.35395290910284" />
-      <entry key="M15" value="242.86807628777237" />
-      <entry key="M30" value="464.6678432247699" />
-      <entry key="H1" value="798.1300824278035" />
-      <entry key="H2" value="1175.2379137698417" />
-      <entry key="H4" value="1524.9093223092982" />
-      <entry key="D1" value="2065.893909670982" />
-      <entry key="W1" value="2208.098083414452" />
+      <entry key="MS100" value="1.660563833157404" />
+      <entry key="MS500" value="2.467248177460685" />
+      <entry key="S2" value="3.370896183106268" />
+      <entry key="S5" value="4.103941866084822" />
+      <entry key="S10" value="5.228270426263911" />
+      <entry key="S30" value="7.206238623830321" />
+      <entry key="S60" value="9.032841539368713" />
+      <entry key="M2" value="19.01613872563402" />
+      <entry key="M5" value="65.83866783356703" />
+      <entry key="M10" value="143.2252822457231" />
+      <entry key="M15" value="221.47846790062286" />
+      <entry key="M30" value="446.76389903390856" />
+      <entry key="H1" value="791.493173027093" />
+      <entry key="H2" value="1187.020237396898" />
+      <entry key="H4" value="1554.9548495894994" />
+      <entry key="D1" value="2122.2156925344857" />
+      <entry key="W1" value="2270.925481204942" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="4.05983697E-314" />
-      <entry key="S2" value="4.488767884816855E-79" />
-      <entry key="S5" value="4.5798458372182805E-32" />
-      <entry key="S10" value="2.1400574378315859E-16" />
-      <entry key="S30" value="5.981539382196872E-6" />
-      <entry key="S60" value="0.002453637560497248" />
-      <entry key="M2" value="0.05254318785020596" />
-      <entry key="M5" value="0.45004444979599617" />
-      <entry key="M10" value="1.320737683162793" />
-      <entry key="M15" value="2.362278656031973" />
-      <entry key="M30" value="5.994887100237508" />
-      <entry key="H1" value="12.36672431242504" />
-      <entry key="H2" value="20.338961582695013" />
-      <entry key="H4" value="28.256989340998363" />
-      <entry key="D1" value="40.40950883007118" />
-      <entry key="W1" value="43.453654578510026" />
+      <entry key="MS100" value="7.2960913639389634E-40" />
+      <entry key="MS500" value="1.4880518111619864E-8" />
+      <entry key="S2" value="0.011079758330716588" />
+      <entry key="S5" value="0.18142924255334933" />
+      <entry key="S10" value="0.5346033951300883" />
+      <entry key="S30" value="1.2495982524450664" />
+      <entry key="S60" value="1.6643905865559998" />
+      <entry key="M2" value="2.2058018030126236" />
+      <entry key="M5" value="3.1443178254845434" />
+      <entry key="M10" value="4.204216631267247" />
+      <entry key="M15" value="5.262233890297723" />
+      <entry key="M30" value="8.821981192757812" />
+      <entry key="H1" value="15.223166158209501" />
+      <entry key="H2" value="23.414127496853517" />
+      <entry key="H4" value="31.61841511278314" />
+      <entry key="D1" value="44.25792450187446" />
+      <entry key="W1" value="47.43038205383649" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9201876607378644" />
-      <entry key="MS500" value="1.0185958054944313" />
-      <entry key="S2" value="2.3808339831619976" />
-      <entry key="S5" value="4.54112678979603" />
-      <entry key="S10" value="6.073886352902156" />
-      <entry key="S30" value="15.037546456041854" />
-      <entry key="S60" value="31.277427471309505" />
-      <entry key="M2" value="53.14097168760338" />
-      <entry key="M5" value="96.27162769231128" />
-      <entry key="M10" value="167.63019686605915" />
-      <entry key="M15" value="245.18105060943515" />
-      <entry key="M30" value="470.6133489672267" />
-      <entry key="H1" value="810.4560592088391" />
-      <entry key="H2" value="1195.5476711087122" />
-      <entry key="H4" value="1553.147395840355" />
-      <entry key="D1" value="2106.2991382134983" />
-      <entry key="W1" value="2251.5510854593435" />
+      <entry key="MS100" value="0.692029747900702" />
+      <entry key="MS500" value="1.7100778319286525" />
+      <entry key="S2" value="2.858086263039405" />
+      <entry key="S5" value="3.9298236062051375" />
+      <entry key="S10" value="5.494166263038092" />
+      <entry key="S30" value="8.314681516520857" />
+      <entry key="S60" value="10.608378781674135" />
+      <entry key="M2" value="21.152281313272628" />
+      <entry key="M5" value="68.92350015128815" />
+      <entry key="M10" value="147.37265551486283" />
+      <entry key="M15" value="226.68367915245196" />
+      <entry key="M30" value="455.53219384005683" />
+      <entry key="H1" value="806.6725891573587" />
+      <entry key="H2" value="1210.4031241665548" />
+      <entry key="H4" value="1586.5530948465769" />
+      <entry key="D1" value="2166.4690722931173" />
+      <entry key="W1" value="2318.3551709912576" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -205,7 +206,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/langchain_course$1_agent_loop_langchain_tool_calling.coverage" NAME="1_agent_loop_langchain_tool_calling Coverage Results" MODIFIED="1789307457924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/langchain_course$main.coverage" NAME="main Coverage Results" MODIFIED="1789306846362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/langchain_course$1_agent_loop_langchain_tool_calling.coverage" NAME="1_agent_loop_langchain_tool_calling Coverage Results" MODIFIED="1789307986854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/langchain_course$main.coverage" NAME="main Coverage Results" MODIFIED="1789307982151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
