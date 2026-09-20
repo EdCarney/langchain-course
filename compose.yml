@@ -1,0 +1,8 @@
+services:
+  unstructured-server:
+    image: downloads.unstructured.io/unstructured-io/unstructured-api:latest
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    mem_limit: 4g
+    cpus: 2
