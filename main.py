@@ -9,7 +9,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
 from langchain_ollama.embeddings import OllamaEmbeddings
 from langchain_pinecone import PineconeVectorStore
-from langfuse import get_client, observe
+from langfuse import get_client
 from langfuse.langchain import CallbackHandler
 
 load_dotenv()
@@ -50,7 +50,6 @@ def retrieval_chain_without_lcel(query: str) -> str:
     return str(response.content)
 
 
-@observe(name="LangChain with RAG")
 def retrieval_chain_with_lcel() -> Runnable:
     retrieval_chain = (
         RunnablePassthrough.assign(
