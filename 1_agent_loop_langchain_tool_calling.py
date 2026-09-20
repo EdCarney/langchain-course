@@ -4,9 +4,15 @@ load_dotenv()
 
 from langchain.chat_models import init_chat_model
 from langchain.tools import tool
-from langchain_core.messages import (BaseMessage, HumanMessage, SystemMessage,
-                                     ToolMessage)
+from langchain_core.messages import (
+    BaseMessage,
+    HumanMessage,
+    SystemMessage,
+    ToolMessage,
+)
 from langsmith import traceable
+from langfuse import observe, get_client
+from langfuse.langchain import CallbackHandler
 
 MAX_ITERATIONS = 10
 PROVIDER_OLLAMA = "ollama"
@@ -46,6 +52,7 @@ def get_discount_tier(price: float, tier: str) -> float:
     Returns:
         The discounted price of the product.
     """
+    tier = tier.lower()
     print(f"    >> Executing get_discount_tier for {price} and {tier}")
     discount_percentages = {"bronze": 5, "silver": 12, "gold": 23}
     discount_percent = discount_percentages.get(tier, 0.0)
@@ -70,7 +77,12 @@ def ask_user_question(query: str) -> str:
 
 
 @traceable(name="LangChain Agent Loop")
+@observe(name="LangChain Agent Loop", as_type="agent")
 def run_agent(query: str):
+    # langfuse config
+    langfuse_client = get_client()
+    langfuse_handler = CallbackHandler()
+
     tools = [get_product_price, get_discount_tier, ask_user_question]
     tool_dict = {t.name: t for t in tools}
     llm = init_chat_model(model=MODEL_GEMMA, temperature=0.1)
@@ -80,12 +92,12 @@ def run_agent(query: str):
 
     sys_msg = SystemMessage(content="""
         You are a helpful shopping assistant. You have access to a product catalog tool and a discount tool. Note that all prices are in USD ($).
-        
+
         STRICT RULES - you must follow these EXACTLY:
         1. NEVER assume or guess the price of a product. You MUST call get_product_price() to get the real price.
         2. Only call get_discount_tier() AFTER you have received a price from get_product_price(). Pass the exact price. NEVER use a made-up number.
         3. NEVER calculate discounts yourself using math. ALWAYS use the get_discount_tier() to do this.
-        4. If the user does not specify a discount tier, ask them which tier to use. NEVER assume the tier.
+        4. If the user does not specify a discount tier or product, ask them which tier to use or which product they are referring to. NEVER assume this information.
         """)
     human_msg = HumanMessage(content=query)
     msgs: list[BaseMessage] = [sys_msg, human_msg]
@@ -93,7 +105,7 @@ def run_agent(query: str):
 
     for iteration in range(1, MAX_ITERATIONS + 1):
         print(f"\n--- Iteration {iteration} ---")
-        ai_msg = llm_with_tools.invoke(msgs)
+        ai_msg = llm_with_tools.invoke(msgs, config={"callbacks": [langfuse_handler]})
         tool_calls = ai_msg.tool_calls
 
         if not tool_calls:
@@ -111,7 +123,7 @@ def run_agent(query: str):
         if not tool_fn:
             raise ValueError(f"Tool {tool_name} not found!")
 
-        obs = tool_fn.invoke(tool_args)
+        obs = tool_fn.invoke(tool_args, config={"callbacks": [langfuse_handler]})
         print(f"    [Tool Result]: {obs}")
 
         msgs.append(ai_msg)
