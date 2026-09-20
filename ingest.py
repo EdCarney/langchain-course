@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from langchain_unstructured.document_loaders import UnstructuredLoader
 from langchain_text_splitters import CharacterTextSplitter
-from langchain_openai.embeddings import OpenAIEmbeddings
+from langchain_ollama.embeddings import OllamaEmbeddings
 from langchain_pinecone import PineconeVectorStore
 
 load_dotenv()
@@ -11,8 +11,11 @@ load_dotenv()
 def main():
     print("ingesting...")
     loader = UnstructuredLoader(
+        partition_via_api=True,
         file_path="./mediumblog1.txt",
-        chunking_strategy="basic",
+        url="http://localhost:8000/",
+        api_key="",
+        strategy="hi_res",
         max_characters=1_000_000,
         encoding="utf-8",
     )
@@ -24,7 +27,7 @@ def main():
 
     print("loading...")
 
-    embeddings = OpenAIEmbeddings()
+    embeddings = OllamaEmbeddings(model="embeddinggemma:latest", dimensions=768)
 
     print("uploading...")
 
