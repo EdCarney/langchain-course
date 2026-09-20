@@ -9,7 +9,11 @@ dependencies = [
     "isort>=9.0.1",
     "langchain>=1.4.2",
     "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.6.2",
     "langchain-pinecone>=0.2.13",
+    "langchain-text-splitters>=1.1.2",
+    "langchain-unstructured>=1.0.1",
     "langfuse>=4.15.4",
     "python-dotenv>=1.2.3",
+    "unstructured>=0.27.6",
 ]
