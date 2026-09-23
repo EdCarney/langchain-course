@@ -1,0 +1,16 @@
+[project]
+name = "langchain-course"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "black>=26.5.1",
+    "certifi>=2026.7.22",
+    "isort>=9.0.1",
+    "langchain>=1.4.2",
+    "langchain-ollama>=1.1.0",
+    "langchain-pinecone>=0.2.13",
+    "langchain-tavily>=0.2.18",
+    "langchain-text-splitters>=1.1.2",
+    "python-dotenv>=1.2.3",
+    "unstructured>=0.27.8",
+]
