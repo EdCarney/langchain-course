@@ -2,10 +2,15 @@ import asyncio
 import os
 import ssl
 import certifi
+import logging
 from typing import Any
 from dotenv import load_dotenv
 
 load_dotenv()
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -28,7 +33,27 @@ tavily_map = TavilyMap(max_depth=5, max_breadth=20, max_pages=1000)
 
 
 async def main():
-    print("Hello!")
+    logging.info("DOCUMENTATION INGESTION PIPELINE")
+
+    logging.info(
+        "TavilyCrawl: starting to crawl documentation from https://python.langchain.com/"
+    )
+
+    resp = tavily_crawl.invoke(
+        {
+            "url": "https://python.langchain.com",
+            "max_depth": 1,
+            "extract_depth": "advanced",
+        }
+    )
+    all_docs = [
+        Document(page_content=res["raw_content"], metadata={"source": res["url"]})
+        for res in resp["results"]
+    ]
+
+    logging.info(
+        f"TavilyCrawl: successfully crawled {len(all_docs)} URLs from documentation site."
+    )
 
 
 if __name__ == "__main__":
